@@ -1,0 +1,43 @@
+/* Custom styles for the Inter font and smooth scrolling */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Fade-in and Upward movement animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0; /* Start hidden */
+}
+

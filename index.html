@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="icon" href="https://th.bing.com/th/id/R.dc3fe318c15eacccc6efb85c3f531a57?rik=I7xlaVE81sGJLA&riu=http%3a%2f%2fclipart-library.com%2fnew_gallery%2f40-400863_women-performing-yoga-with-sun-background-yoga-logo.png&ehk=WDAXpf77MjHlJIFPTNVRZ%2fqPGMs%2bB1LWNObDOKnAJqY%3d&risl=&pid=ImgRaw&r=0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-transparent shadow-md py-4 px-6 fixed w-full z-50 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold flex items-center space-x-2">
+                <img src="https://pngimg.com/d/yoga_PNG39.png" alt="Yoga Pose" class="h-8 inline-block mr-2">
+                <span id="logo-text" class="transition duration-300 text-white">Yoga</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 rounded-md p-2">Home</a>
+                <a href="#about" class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 rounded-md p-2">About Us</a>
+                <a href="#classes" class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 rounded-md p-2">Classes</a>
+                <a href="#instructors" class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 rounded-md p-2">Instructors</a>
+                <a href="#booking" class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 rounded-md p-2">Booking Classes</a>
+                <a href="#testimonials" class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 rounded-md p-2">Testimonials</a>
+                <a href="#contact" class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 rounded-md p-2">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6 rounded-lg">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="#hero" class="text-2xl font-medium text-black-800 hover:text-indigo-600 transition duration-300 rounded-md p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+            <a href="#about" class="text-2xl font-medium text-gray-800 hover:text-indigo-600 transition duration-300 rounded-md p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Us</a>
+            <a href="#classes" class="text-2xl font-medium text-gray-800 hover:text-indigo-600 transition duration-300 rounded-md p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Classes</a>
+            <a href="#instructors" class="text-2xl font-medium text-gray-800 hover:text-indigo-600 transition duration-300 rounded-md p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Instructors</a>
+            <a href="#booking" class="text-2xl font-medium text-gray-800 hover:text-indigo-600 transition duration-300 rounded-md p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Booking Classes</a>
+            <a href="#testimonials" class="text-2xl font-medium text-gray-800 hover:text-indigo-600 transition duration-300 rounded-md p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Testimonials</a>
+            <a href="#contact" class="text-2xl font-medium text-gray-800 hover:text-indigo-600 transition duration-300 rounded-md p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="relative bg-cover bg-center h-screen flex items-center justify-center text-center rounded-b-xl" style="background-image: url('https://wallpapercave.com/wp/wp3157179.jpg');">
+            <div class="absolute inset-0 bg-black opacity-50 rounded-b-xl"></div>
+            <div class="relative z-10 text-white p-8 max-w-3xl mx-auto rounded-xl bg-transparent bg-opacity-40 shadow-xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 rounded-lg fade-in-up">Find Your Inner Peace</h1>
+                <p class="text-xl md:text-2xl mb-8 rounded-lg fade-in-up" style="animation-delay: 0.5s;">Join us to experience the transformative power of yoga for mind, body, and spirit.</p>
+                <a href="#classes" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300">Explore Classes</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl mx-4 my-8 shadow-lg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-indigo-800 mb-8 rounded-lg">About Yoga</h2>
+                <div class="md:flex items-center justify-center md:space-x-12">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://th.bing.com/th/id/R.7a94fce7e81429940071488fa648b612?rik=fifLObFvybed4A&riu=http%3a%2f%2fwww.fitnessgymyoga.com%2fwp-content%2fuploads%2f2016%2f01%2fDifficult-Yoga-Poses-For-Beginners.jpg&ehk=PLAtCQLKbzUvl7iMJsZraF5RpD06JV2qu7GphZ2sMRU%3d&risl=&pid=ImgRaw&r=0" alt="Yoga pose" class="rounded-xl shadow-lg mx-auto">
+                    </div>
+                    <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed">
+                        <p class="mb-4 rounded-lg">We believe that yoga is for everyone, regardless of age, flexibility, or experience. Our studio offers a welcoming and inclusive environment where you can explore various yoga styles, deepen your practice, and connect with a supportive community.</p>
+                        <p class="mb-4 rounded-lg">Our certified instructors are passionate about sharing the benefits of yoga, helping you improve physical strength, mental clarity, and emotional well-being. We focus on mindful movement, breathwork, and meditation to help you achieve holistic health.</p>
+                        <p class="rounded-lg">Come discover the serenity within you and embark on a journey of self-discovery and transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="classes" class="py-16 md:py-24 bg-white rounded-xl mx-4 my-8 shadow-lg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-indigo-800 mb-12 rounded-lg">Our Yoga Classes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Kids Yoga -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="text-2xl font-semibold text-indigo-700 mb-4 rounded-lg">Kids Yoga</h3>
+                        <p class="text-gray-700 mb-6 rounded-lg">Fun, playful yoga designed specifically for children to build coordination, balance, and mindfulness.</p>
+                        <ul class="text-left text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center rounded-lg"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Ages 4–12</li>
+                            <li class="flex items-center rounded-lg"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Improves focus & flexibility</li>
+                            <li class="flex items-center rounded-lg"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Includes games & creativity</li>
+                        </ul>
+                        <a href="#booking" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-full text-md shadow-md transition duration-300">Book Now</a>
+                    </div>
+
+                    <!-- Pregnancy Yoga -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="text-2xl font-semibold text-indigo-700 mb-4 rounded-lg">Pregnancy Yoga</h3>
+                        <p class="text-gray-700 mb-6 rounded-lg">Gentle movements and breathwork tailored for expectant mothers to support a healthy pregnancy.</p>
+                        <ul class="text-left text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center rounded-lg"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Safe for all trimesters</li>
+                            <li class="flex items-center rounded-lg"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Eases discomfort & stress</li>
+                            <li class="flex items-center rounded-lg"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Breathing techniques for labor</li>
+                        </ul>
+                        <a href="#booking" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-full text-md shadow-md transition duration-300">Book Now</a>
+                    </div>
+
+                    <!-- Yoga for Adults Only -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="text-2xl font-semibold text-indigo-700 mb-4 rounded-lg">Yoga for Adults</h3>
+                        <p class="text-gray-700 mb-6 rounded-lg">A mature space for adults to deepen their practice, enhance mobility, and find mental clarity.</p>
+                        <ul class="text-left text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center rounded-lg"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Ages 18+</li>
+                            <li class="flex items-center rounded-lg"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Improves mental focus</li>
+                            <li class="flex items-center rounded-lg"><svg class="w-5 h-5 text-indigo-500 mr-2" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Tailored to adult fitness levels</li>
+                        </ul>
+                        <a href="#booking" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-full text-md shadow-md transition duration-300">Book Now</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="instructors" class="py-16 md:py-24 bg-white rounded-xl mx-4 my-8 shadow-lg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-indigo-800 mb-8 rounded-lg">Meet Your Instructor</h2>
+                <div class="max-w-2xl mx-auto bg-gradient-to-br from-purple-50 to-indigo-50 p-8 rounded-xl shadow-lg">
+                    <img src="/images/1.jpeg" alt="Instructor Sarah Gupta" class="w-36 h-36 rounded-full mx-auto mb-4 shadow-md">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Ovyavalli </h3>
+                    <p class="text-gray-700 italic mb-3">Certified Yoga Instructor</p>
+                    <p class="text-gray-600 text-md mb-4">Ovya leads all our classes—Kids Yoga, Pregnancy Flow, Yoga for Adults—with passion, clarity, and care. Her goal is to guide students on a path of physical strength and mental serenity.</p>
+                    <div class="flex flex-wrap justify-center gap-3 text-indigo-600 text-sm sm:text-base mt-4">
+                        <span class="bg-indigo-100 px-4 py-1 rounded-full shadow">Kids Yoga</span>
+                        <span class="bg-indigo-100 px-4 py-1 rounded-full shadow">Pregnancy Yoga</span>
+                        <span class="bg-indigo-100 px-4 py-1 rounded-full shadow">Yoga for Adults </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="booking" class="py-16 md:py-24 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl mx-4 my-8 shadow-lg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-indigo-800 mb-12 rounded-lg">Book Your Classes</h2>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <form id="booking-form" class="space-y-6" action="" method="POST">
+                        <div>
+                            <label for="booking-name" class="block text-left text-gray-700 text-sm font-bold mb-2 rounded-lg">Name</label>
+                            <input type="text" id="booking-name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="booking-email" class="block text-left text-gray-700 text-sm font-bold mb-2 rounded-lg">Email</label>
+                            <input type="email" id="booking-email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300" placeholder="your.email@example.com" required>
+                        </div>
+                        <div>
+                            <label for="class-type" class="block text-left text-gray-700 text-sm font-bold mb-2 rounded-lg">Class Type</label>
+                            <select id="class-type" name="classType" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300" required>
+                                <option value="">Select a Class</option>
+                                <option value="Kids Yoga">Kids Yoga</option>
+                                <option value="Pregnancy Yoga">Pregnancy Yoga</option>
+                                <option value="Yoga for Adults Only">Yoga for Adults</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="booking-date" class="block text-left text-gray-700 text-sm font-bold mb-2 rounded-lg">Date (Saturday or Sunday)</label>
+                            <select id="booking-date" name="bookingDate" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300" required>
+                                <option value="">Select a Date</option>
+                                </select>
+                        </div>
+                        <div>
+                            <label for="booking-time" class="block text-left text-gray-700 text-sm font-bold mb-2 rounded-lg">Time</label>
+                            <select id="booking-time" name="bookingTime" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300" required>
+                                <option value="">Select a Time</option>
+                                </select>
+                        </div>
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300">Book Class</button>
+                    </form>
+                    <div id="booking-message" class="mt-4 p-3 bg-green-100 text-green-800 rounded-lg hidden" role="alert">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-16 md:py-24 bg-white rounded-xl mx-4 my-8 shadow-lg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-indigo-800 mb-12 rounded-lg">What Our Students Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl shadow-lg">
+                        <p class="text-gray-700 italic mb-6 rounded-lg">"Ovya has transformed my daily routine. Their instruction is incredibly supportive, and their classes offer the perfect blend of challenge and relaxation. Highly recommend!"</p>
+                        <p class="font-semibold text-indigo-700 rounded-lg">- Akash</p>
+                        <p class="text-sm text-gray-600 rounded-lg">Beginner Kids Yoga Student</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl shadow-lg">
+                        <p class="text-gray-700 italic mb-6 rounded-lg">"I've been practicing yoga for years, and Ovya is one of the best teachers I've ever learned from. Their Pregnancy Yoga classes are energizing, and I always leave feeling invigorated."</p>
+                        <p class="font-semibold text-indigo-700 rounded-lg">- Prema</p>
+                        <p class="text-sm text-gray-600 rounded-lg">Experienced Pregnancy Yoga</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl shadow-lg">
+                        <p class="text-gray-700 italic mb-6 rounded-lg">"The Restorative Yoga classes are my sanctuary. It's the perfect way to unwind and de-stress after a long week. The studio atmosphere is so peaceful."</p>
+                        <p class="font-semibold text-indigo-700 rounded-lg">- Pranav </p>
+                        <p class="text-sm text-gray-600 rounded-lg">Yoga for Adults Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl mx-4 my-8 shadow-lg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-indigo-800 mb-12 rounded-lg">Contact</h2>
+                <div class="mt-12 text-lg text-gray-700 space-y-4">
+                    <p class="rounded-lg"> <i class="fa-solid fa-location-dot"></i> 14/A Manaikavalan street Thoothukudi Near johnson school</p>
+                    <a href="tel:+919360344263"><p class="rounded-lg"><i class="fa-solid fa-phone"></i> 9360344263</p></a>
+                    <p class="rounded-lg"><i class="fa-solid fa-envelope"></i> ovyavalli8@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 px-6 text-center rounded-t-xl">
+        <div class="container mx-auto">
+            <p class="mb-4 rounded-lg">© 2025 Yoga Studio. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 text-3xl"> 
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="text-gray-300 hover:text-white transition duration-300 rounded-md p-2">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="text-gray-300 hover:text-white transition duration-300 rounded-md p-2">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="text-gray-300 hover:text-white transition duration-300 rounded-md p-2">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-gray-300 hover:text-white transition duration-300 rounded-md p-2">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="text-gray-300 hover:text-white transition duration-300 rounded-md p-2">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
